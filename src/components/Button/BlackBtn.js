@@ -1,6 +1,3 @@
-import React from "react";
-import "./button.css";
-
 const BlackBtn = (props) => {
   const { title, goarrowupright, onClick } = props;
 

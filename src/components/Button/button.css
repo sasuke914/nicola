@@ -1,5 +1,6 @@
 .headerBtn {
   background: var(--topButtonColor);
+  font-family: 'Inter';
   color: var(--topBtnLetterColor);
   border-radius: 50px;
   border: none;
@@ -7,7 +8,6 @@
   font-size: 14px;
   margin-left: 5px;
   font-weight: 400;
-  font-family: "Inter";
   letter-spacing: -0.03em;
 }
 
@@ -29,7 +29,6 @@
   margin-right: 11px;
   margin-bottom: 14px;
   font-weight: 400;
-  font-family: "Inter";
   letter-spacing: -0.03em;
 }
 
@@ -43,7 +42,6 @@
 .welcomeLinkBtn {
   font-size: 18px;
   font-weight: 400;
-  font-family: "Inter";
   color: var(--headerTxtColor);
   display: flex;
   align-items: flex-end;
@@ -56,31 +54,14 @@
 .sectionButton {
   background: var(--headerBtnColor);
   color: var(--headerTxtColor);
-  padding: 8px 19px 8px 10px;
-  border: none;
-  border-radius: 50px;
-  font-family: "Inter";
-  font-size: 14px;
-  font-weight: 400;
-  cursor: pointer;
-  transition: 0.5s;
-  letter-spacing: -0.03em;
-  margin-top: 5px;
-}
-
-.sectionButton1 {
-  background: var(--headerBtnColor);
-  color: var(--headerTxtColor);
   padding: 8px 7px 8px 10px;
+  margin-top: 5px;
   border: none;
   border-radius: 50px;
-  font-family: "Inter";
   font-size: 14px;
-  font-weight: 400;
   cursor: pointer;
   transition: 0.5s;
   letter-spacing: -0.03em;
-  margin-top: 5px;
 }
 
 .sectionButton:hover {
@@ -90,17 +71,9 @@
   color: var(--primary-bgColor);
 }
 
-.sectionButton1:hover {
-  cursor: pointer;
-  transition: 0.8s;
-  background: var(--headerHBtnColor);
-  color: var(--primary-bgColor);
-}
-
 .blackBtn {
   background: var(--primary-txtColor);
   font-size: 16px;
-  font-family: "Inter";
   font-weight: 500;
   color: var(--primary-bgColor);
   padding: 15px 25px;
@@ -118,7 +91,6 @@
 }
 
 .uploadBtn {
-  font-family: "Inter";
   font-weight: 500;
   font-size: 18px;
   display: flex;
@@ -136,4 +108,77 @@
   background: #8424de;
   transition: 1s;
   cursor: pointer;
+}
+
+.icon-button {
+  display: flex;
+  max-width: 200px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.button-title {
+  background-color: white;
+  border-radius: 30px;
+  color: #8424de;
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.03em;
+  padding: 15px 22.95px 15px 22.95px;
+  transition: 0.5s;
+}
+
+.button-icon {
+  position: relative;
+}
+
+.vector-icon {
+  position: absolute;
+  top: -6px;
+  width: 45px;
+  left: -7px;
+  transition: 0.5s;
+}
+
+.icon {
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-left: -7px;
+  transition: 0.5s;
+}
+
+.cardAddIcon {
+  color: #8424de;
+  transition: 0.5s;
+}
+
+.icon-button:hover {
+  .button-title {
+    background: black;
+    color: white;
+
+  }
+
+  .vector-icon {
+    filter: invert(1);
+
+  }
+
+  .icon {
+    background: black;
+
+  }
+
+  .cardAddIcon {
+    color: white;
+
+  }
 }

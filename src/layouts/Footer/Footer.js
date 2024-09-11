@@ -1,80 +1,86 @@
-import React from "react";
-import "./footer.css";
+import { Link } from "react-scroll";
 import { Box } from "@mui/material";
-import telegramIcon from "../../../src/assets/icon/bxl_telegram.png";
-import mailIcon from "../../../src/assets/icon/fluent_mail-20-filled.png";
-import icon1 from "../../../src/assets/icon/Vector (4).png";
-import icon2 from "../../../src/assets/icon/vcru_pink.png";
-import icon3 from "../../../src/assets/icon/Vector.png";
-import icon4 from "../../../src/assets/icon/Vector (1).png";
-import icon5 from "../../../src/assets/icon/Vector (2).png";
-import icon6 from "../../../src/assets/icon/Vector (3).png";
+import { footerLeftInfo, footerBtnInfo, footerSocialInfo } from "../../constant/group";
+
+import "./footer.css";
 
 const Footer = () => {
+
+  const FirstSection = () => (
+    <Box className="footerFirst">
+      <div>
+        Physical space is often conceived in three linear dimensions,
+        <br />
+        although modern physicists usually con
+      </div>
+      <input className="footerInput" />
+    </Box>
+  )
+
+  const SecondSection = () => (
+    <div className="footerSecond">
+      <Box>
+        {footerLeftInfo.map((item, index) => (
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noreferrer"
+            key={index}
+            className="footerIcontxt"
+          >
+            {item.icons}
+            <div>{item.letter}</div>
+          </a>
+        ))}
+      </Box>
+      <a
+        href="https://web.telegram.org"
+        target="_blank"
+        rel="noreferrer"
+        className="footerDarkBtn"
+      >
+        Lorem ipsum sit
+      </a>
+    </div>
+  )
+
+  const ThirdSection = () => (
+    <Box className="footerThird">
+      <div className="footerBtns">
+        {footerBtnInfo.map((item, index) => (
+          <div key={index} className="footerBtnItem" style={{ padding: item.padding }}>
+            <Link to={item.path} spy={true} smooth={true}>
+              {item.title}
+            </Link>
+          </div>
+        ))}
+      </div>
+      <Box className="footerSocials">
+        {footerSocialInfo.map((item, index) => (
+          <a key={index} href={item.path} target="_blank" rel="noopener noreferrer">
+            <img src={item.src} alt={item.src} />
+          </a>
+        ))
+        }
+      </Box>
+    </Box>
+  )
+
+  const ForthSection = () => (
+    <Box className="footerDown">
+      <div>© 2024 Василий Петров</div>
+      <div>Политика конфиденциальности</div>
+    </Box>
+  )
+
   return (
     <Box className="footerContainer">
-      <Box className="footerWrapper">
-        <Box className="footerFirst">
-          <Box>
-            Physical space is often conceived in three linear dimensions,
-            <br />
-            although modern physicists usually con
-          </Box>
-          <input className="footerInput" />
-        </Box>
-        <Box className="footerSecond">
-          <Box>
-            {[
-              { icons: <img src={telegramIcon} />, letter: "@login" },
-              { icons: <img src={mailIcon} />, letter: "mail@site.ru" },
-            ].map((item, index) => (
-              <Box key={index} className="footerIcontxt">
-                {item.icons}
-                <Box>{item.letter}</Box>
-              </Box>
-            ))}
-          </Box>
-          <Box className="footerDarkBtn">Lorem ipsum sit</Box>
-        </Box>
-        <Box className="footerThird">
-          <Box className="footerBtns">
-            {["Lorem", "Ipsum", "Dolor sit", "Amet", "Aenean"].map(
-              (item, index) => (
-                <Box key={index} className="footerGrayBtns">
-                  <Box
-                    className="footerBtnItem"
-                    style={{
-                      padding: `${
-                        index === 0 || index === 3 || index === 4
-                          ? "16px 24px 17px 24px"
-                          : "16px 37px 16px 36px"
-                      }`,
-                    }}
-                  >
-                    {item}
-                  </Box>
-                </Box>
-              )
-            )}
-          </Box>
-          <Box className="footerSocials">
-            {[
-              <a href="https://habr.com/ru/articles/" target="_blank"><img src={icon1} /></a>,
-              <a href="https://vc.ru/"  target="_blank"><img src={icon2} /></a>,
-              <a href="https://ru.linkedin.com/" target="_blank"><img src={icon3} /></a>,
-              <a href="https://www.facebook.com/" target="_blank"><img src={icon4} /></a>,
-              <a href="https://twitter.com" target="_blank"><img src={icon5} /></a>,
-              <a href="https://www.youtube.com/" target="_blank"><img src={icon6} /></a>
-            ].map((item, index) => (
-              <Box key={index}>{item}</Box>
-            ))}
-          </Box>
-        </Box>
-        <Box className="footerDown">
-          <Box>© 2024 Василий Петров</Box>
-          <Box>Политика конфиденциальности</Box>
-        </Box>
-      </Box>
+      <div className="footerWrapper">
+        <FirstSection />
+        <SecondSection />
+        <ThirdSection />
+        <ForthSection />
+      </div>
     </Box>
   );
 };

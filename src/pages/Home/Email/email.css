@@ -1,24 +1,22 @@
 .Emailsection {
+  position: relative;
   width: 100%;
   max-width: 1160px;
+  background: var(--emailBgColor);
   margin: auto;
   margin-top: 100px;
-  background: var(--emailBgColor);
-  position: relative;
 }
 
 .emailTitle {
-  font-family: "Inter";
+  padding-top: 25px;
+  padding-left: 34px;
   font-weight: 700;
   font-size: 30px;
   color: var(--primary-txtColor);
-  padding-top: 25px;
-  padding-left: 34px;
   letter-spacing: -0.03em;
 }
 
 .emailTxt {
-  font-family: "Inter";
   font-weight: 400;
   font-size: 16px;
   color: var(--primary-txtColor);
@@ -41,28 +39,26 @@
 .inputWrapper input {
   width: 250px;
   height: 45px;
-  border-radius: 5px;
   background: var(--inputBgColor);
-  border: none;
-  font-family: "Inter";
+  padding-left: 19px;
   font-weight: 400;
   font-size: 14px;
   color: var(--grayText);
-  padding-left: 19px;
+  border: none;
+  border-radius: 5px;
 }
 
 .emailSend {
-  font-family: "Inter";
+  background: var(--primary-txtColor);
+  padding: 16px 35px 16px 35px;
+  margin-left: 25px;
   font-weight: 500;
   font-size: 14.71px;
-  background: var(--primary-txtColor);
   color: var(--primary-bgColor);
   border: none;
   border-radius: 459.57px;
-  padding: 16px 35px 16px 35px;
-  cursor: pointer;
-  margin-left: 25px;
   transition: 1s;
+  cursor: pointer;
 }
 
 .emailSend:hover {
@@ -73,23 +69,23 @@
 .emailIconWrapper {
   display: flex;
   margin-top: 95px;
-  gap: 3px;
   padding-right: 15px;
+  gap: 3px;
 }
 
 .emailCircle {
+  position: relative;
   width: 48px;
   height: 50px;
+  background: #e0e0e0;
+  margin-right: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #e0e0e0;
   border-radius: 50%;
-  margin-right: 12px;
-  position: relative;
 }
 
-.emailCircle img:hover{
+.emailCircle img:hover {
   cursor: pointer;
   filter: invert(24%) sepia(97%) saturate(7500%) hue-rotate(280deg) brightness(100%) contrast(100%);
 }
@@ -100,18 +96,14 @@
   top: 0px;
 }
 
-
-
-/* input css */
-
 .inp {
   position: relative;
   margin: auto;
   width: 100%;
   height: 45px;
   max-width: 267px;
-  border-radius: 5px;
   background-color: var(--inputBgColor);
+  border-radius: 5px;
   overflow: hidden;
 }
 
@@ -119,12 +111,10 @@
   position: absolute;
   top: 2px;
   left: 12px;
-  color: var(--grayText) !important;;
-  font-family: "Inter";
-  font-weight: 400;
+  color: var(--grayText) !important;
   font-size: 14px;
-  letter-spacing: -0.03em;
   font-weight: 500;
+  letter-spacing: -0.03em;
   transform-origin: 0 0;
   transform: translate3d(0, 0, 0);
   transition: all 0.2s ease;
@@ -135,33 +125,28 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 267px;;
+  width: 267px;
   height: 45px;
-  z-index: -1;
   transform: scaleX(0);
   transform-origin: left;
+  z-index: -1;
 }
 
 .inp input {
-  -webkit-appearance: none;
-  appearance: none;
-  width:267px;
-  border: 0;
-  font-family: inherit;
-  padding-left: 13px;
+  width: 267px;
   height: 45px;
-  font-size: 16px;
-  font-weight: 400;
   background: var(--inputBgColor);
-  transition: all 0.15s ease;
+  padding-left: 13px;
   color: var(--grayText) !important;
-  font-family: "Inter";
-  font-weight: 400;
   font-size: 14px;
+  border: 0;
+  transition: all 0.15s ease;
   letter-spacing: -0.03em;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
-.inp input:not(:placeholder-shown) + .label {
+.inp input:not(:placeholder-shown)+.label {
   transform: translate3d(0, -12px, 0) scale(0.75);
 }
 
@@ -169,11 +154,11 @@
   outline: none;
 }
 
-.inp input:focus + .label {
+.inp input:focus+.label {
   transform: translate3d(0, -14px, 0) scale(0.75);
 }
 
-.inp input:focus + .label + .focus-bg {
+.inp input:focus+.label+.focus-bg {
   transform: scaleX(1);
   transition: all 0.1s ease;
 }

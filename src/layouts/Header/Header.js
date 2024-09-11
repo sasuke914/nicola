@@ -1,39 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { Box } from "@mui/material";
+import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
+import { Box } from "@mui/material";
 import { GoSun } from "react-icons/go";
 import { PiMoonLight } from "react-icons/pi";
-import HeaderBtn from "../../components/Button/HeaderBtn";
-import "../../components/Switch/switch.css";
-import "./header.css";
 
-export const headerBtnInfo = [
-  {
-    title: "Lorem",
-    id: "welcome",
-    classPadding: "padding: '10px 20px 10px 20px'",
-  },
-  {
-    title: "Ipsum",
-    id: "mypub",
-    classPadding: "padding: '10px 20px 10px 20px'",
-  },
-  {
-    title: "Dolor sit",
-    id: "c_reviews",
-    classPadding: "padding: '10px 20px 10px 20px'",
-  },
-  {
-    title: "Amet",
-    id: "events",
-    classPadding: "padding: '10px 20px 10px 20px'",
-  },
-  {
-    title: "Commodo",
-    id: "commodo",
-    classPadding: "padding: '10px 20px 10px 20px'",
-  },
-];
+import HeaderBtn from "../../components/Button/HeaderBtn";
+
+import { headerBtnInfo } from "../../constant/group";
+
+import "./header.css";
 
 const Header = (props) => {
   const { theme, switchTheme } = props;
@@ -51,18 +26,14 @@ const Header = (props) => {
   const ToggleTheme = () => (
     <div className="toggleTheme">
       <i style={{ marginTop: "3.5px" }}>
-        <GoSun
-          style={{ color: "var(--primary-txtColor)", marginRight: "12px" }}
-        />
+        <GoSun style={{ color: "var(--primary-txtColor)" }} />
       </i>
-      <label className="switch">
+      <label className="switch" style={{ margin: "0 12px" }}>
         <input type="checkbox" onChange={handleChange} checked={checked} />
         <span className="slider round"></span>
       </label>
       <i style={{ marginTop: "3.5px" }}>
-        <PiMoonLight
-          style={{ color: "var(--primary-txtColor)", marginLeft: "12px" }}
-        />
+        <PiMoonLight style={{ color: "var(--primary-txtColor)" }} />
       </i>
     </div>
   );
@@ -74,24 +45,11 @@ const Header = (props) => {
       </div>
       <div className="headerRightWrap">
         <div className="buttonGroup">
-          <Link to="welcome" spy={true} smooth={true}>
-            <HeaderBtn title="Lorem" padding="12.5px 24.5px 13.5px 24.5px" />
-          </Link>
-          <Link to="mypub" spy={true} smooth={true}>
-            <HeaderBtn title="Ipsum" padding="12.5px 37.5px 13.5px 36.5px" />
-          </Link>
-          <Link to="c_reviews" spy={true} smooth={true}>
-            <HeaderBtn
-              title="Dolor sit"
-              padding="12.5px 34.5px 13.5px 34.5px"
-            />
-          </Link>
-          <Link to="events" spy={true} smooth={true}>
-            <HeaderBtn title="Amet" padding="12.5px 23.5px 13.5px 24.5px" />
-          </Link>
-          <Link to="#" spy={true} smooth={true}>
-            <HeaderBtn title="Commodo" padding="12.5px 14.5px 13.5px 14.5px" />
-          </Link>
+          {headerBtnInfo.map((item, index) => (
+            <Link key={index} to={item.path} spy={true} smooth={true}>
+              <HeaderBtn title={item.title} padding={item.padding} />
+            </Link>
+          ))}
         </div>
         <ToggleTheme />
       </div>

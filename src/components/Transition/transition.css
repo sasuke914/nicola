@@ -1,113 +1,123 @@
-.transitionTop {
+.transitionWrapper {
+  position: absolute;
   width: 266px;
   height: 266px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.transitionTop {
   background: #ececec;
-  position: absolute;
   top: 80px;
   right: -100px;
-  border-radius: 10px;
   rotate: -30deg;
-  transition: 1s;
 }
 
 .transitionTop1 {
-  width: 266px;
-  height: 266px;
   background: #e0e0e0;
-  border-radius: 10px;
-  position: absolute;
   top: 280px;
   rotate: -50deg;
   right: -120px;
-  transition: 1s;
 }
 
 .transitionTop1:hover {
-  rotate: -27.21deg;
   right: 80px;
+  rotate: -27.21deg;
   transition: 1s;
   cursor: pointer;
 }
 
 .transitionTop:hover {
-  cursor: pointer;
-  rotate: -9.15deg;
   right: 100px;
+  rotate: -9.15deg;
   transition: 1s;
+  cursor: pointer;
 }
 
 .colTxt {
   padding-top: 43.68px;
   padding-left: 25px;
-  color: #8424de;
   font-family: "Inter";
   font-weight: 600;
   font-size: 14px;
+  color: #8424de;
   letter-spacing: -0.03em;
 }
 
 .topTxt {
   font-size: 14px;
-  font-weight: 400;
   color: #808080;
   line-height: 19.6px;
   padding-left: 25px;
   letter-spacing: -0.03em;
 }
 
-.topBtnWrapper {
+.transitionBtnWrap {
   display: flex;
+  align-items: center;
 }
 
-.topButton {
+.transitionBtn {
   width: 168px;
   height: 47.8px;
-  border-radius: 459px;
-  color:var(--primary-bgColor);
+  background-color: var(--primary-txtColor);
   display: flex;
   justify-content: center;
   align-items: center;
-  border: none;
-  font-family: "Inter";
   margin-top: 30px;
-  background-color: var(--primary-txtColor);
   margin-left: 25px;
+  font-family: "Inter";
+  color: var(--primary-bgColor);
+  border: none;
+  border-radius: 459px;
   cursor: pointer;
+  z-index: 1;
+}
+
+.topCircleBorder {
+  width: 47.8px;
+  height: 47.8px;
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  margin-left: -5px;
+  border-left: none !important;
+  border: 1px solid var(--primary-txtColor);
+  border-radius: 50%;
+  z-index: 0;
 }
 
 .topCircle {
-  width: 47.8px;
-  height: 47.8px;
-  border-radius: 50%;
+  width: 45px;
+  height: 45px;
   background-color: var(--primary-txtColor);
-  margin-top: 30px;
-  margin-left: -5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
 }
 
-.topTelegram{
+.topTelegram {
   color: var(--primary-bgColor);
 }
 
-.topBtnWrapper:hover{
-  .topButton{
+.transitionBtnWrap:hover {
+  .transitionBtn {
     background-color: var(--pinkColor);
     color: white;
   }
 
-  .topTelegram{
+  .topCircleBorder {
+    border: 1px solid var(--pinkColor);
+  }
+
+  .topTelegram {
     color: white;
   }
 
-  .topCircle{
+  .topCircle {
     background-color: var(--pinkColor);
-  }
-}
-
-@media (max-width: 900px) {
-  .transitionContainer {
-    display: none;
   }
 }

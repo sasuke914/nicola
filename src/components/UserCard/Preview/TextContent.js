@@ -1,6 +1,4 @@
-import React from "react";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import { IconButton, Stack } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
@@ -40,8 +38,9 @@ export default function PreviewContent(props) {
                   width: "50px",
                   height: "50px",
                   borderRadius: "50%",
-                  backgroundImage: `url(${avatar})`,
                 }}
+                src={avatar}
+                alt={avatar}
                 className="avatarModal"
               />
               <Stack direction="column" spacing={2}>

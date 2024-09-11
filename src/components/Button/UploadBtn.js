@@ -1,4 +1,3 @@
-import React from "react";
 import { PiPaperclip } from "react-icons/pi";
 import "./button.css";
 

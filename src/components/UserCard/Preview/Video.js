@@ -1,4 +1,3 @@
-import React from "react";
 import Box from "@mui/material/Box";
 import { Stack, IconButton } from "@mui/material";
 import Typography from "@mui/material/Typography";
@@ -34,21 +33,11 @@ export default function PreviewVideo(props) {
           <Stack direction="row" spacing={2} alignItems="center">
             <Box className="spaceBetween" sx={{ width: "100%" }}>
               <Stack direction="column" spacing={2}>
-                <Typography
-                  sx={{
-                    fontSize: "20px",
-                    fontWeight: 600,
-                    color: "#F7F7F7",
-                  }}
-                >
+                <Typography sx={{ fontSize: "20px", fontWeight: 600, color: "#F7F7F7", }}>
                   {name}
                 </Typography>
                 <Typography
-                  sx={{
-                    fontSize: "12px",
-                    fontWeight: 400,
-                    color: "#808080",
-                  }}
+                  sx={{ fontSize: "12px", fontWeight: 400, color: "#808080" }}
                 >
                   {title}
                 </Typography>

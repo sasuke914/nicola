@@ -1,14 +1,10 @@
-import React from "react";
-import SectionButton from "../../../components/Button/SectionButton";
-import "./my-publications.css";
-
 const PublicationTitle = () => {
   return (
-    <div className="publicationTitle">
-      <div className="pubTitleLeft">
-        <SectionButton title="Lorem ipsum dolor" />
+    <div className="sectionHeader">
+      <div className="sectionLeft">
+        <button className="sectionButton" style={{ paddingRight: '19px' }}>Lorem ipsum dolor</button>
       </div>
-      <div className="pubTitleRight">
+      <div className="sectionRight" style={{ marginLeft: '311px' }}>
         Lorem ipsum dolor sit amet lorem <span>lorem ipsum dolor sit am</span>{" "}
         lorem ipsu Lorem ipsum dolor sit amet lorem
       </div>

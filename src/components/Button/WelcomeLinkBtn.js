@@ -1,13 +1,16 @@
-import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
-import "./button.css";
 
 const WelcomeLinkBtn = (props) => {
-  const { title } = props;
+  const { title, url } = props;
   return (
-    <a href="#" className="welcomeLinkBtn">
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="welcomeLinkBtn"
+    >
       {title}
-      <GoArrowUpRight style={{fontWeight: "800"}} />
+      <GoArrowUpRight style={{ fontWeight: "800" }} />
     </a>
   );
 };

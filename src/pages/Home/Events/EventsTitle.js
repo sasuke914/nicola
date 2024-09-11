@@ -1,14 +1,10 @@
-import React from "react";
-import SectionButton1 from "../../../components/Button/SectionButton1";
-import "./events.css";
-
 const EventsTitle = () => {
   return (
-    <div className="eventsTitle">
-      <div className="eventsTitleLeft">
-        <SectionButton1 title="Lorem Ipsum" />
+    <div className="sectionHeader" style={{ paddingTop: '200px', paddingBottom: '60px' }}>
+      <div className="sectionLeft">
+        <button className="sectionButton">Lorem ipsum</button>
       </div>
-      <div className="eventsTitleRight">
+      <div className="sectionRight" style={{ width: '707px' }}>
         Lorem ipsum dolor <span>lorem ipsum dolor sit amet, consectetuer</span>
       </div>
     </div>

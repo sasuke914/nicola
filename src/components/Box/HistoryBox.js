@@ -1,4 +1,3 @@
-import React from "react";
 import { Telegram } from "@mui/icons-material";
 import { Box, Typography } from "@mui/material";
 import { GoArrowUpRight } from "react-icons/go";
@@ -19,9 +18,7 @@ const HistoryBox = (props) => {
           <Telegram />
           <Typography
             sx={{
-              fontWeight: "500",
               fontSize: "16px",
-              fontFamily: "Inter",
               fontWeight: 500,
               lineHeight: "19px",
             }}
@@ -30,10 +27,12 @@ const HistoryBox = (props) => {
           </Typography>
         </Box>
         <Typography className="defaultWrapper">
-          <a href="#">
-            <span
-              className="itemCenter reviewCardTag"
-            >
+          <a
+            href="https://web.telegram.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="itemCenter reviewCardTag">
               Читать телеграм <GoArrowUpRight />
             </span>
           </a>
@@ -42,7 +41,7 @@ const HistoryBox = (props) => {
           </span>
         </Typography>
       </Box>
-      <img className="right-img" src={imgUrl} />
+      {imgUrl && <img className="right-img" src={imgUrl} alt="right-img" />}
     </Box>
   );
 };

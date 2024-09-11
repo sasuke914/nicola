@@ -1,29 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Box, Checkbox } from "@mui/material";
+
 import UploadBtn from "../Button/UploadBtn";
 import ModalInput from "./ModalInput";
-import "./modal.css"; // Import your CSS file
 
-const ModalSelectBtn = [
-  {
-    title: "Lorem ipsum",
-  },
-  {
-    title: "Dolor sit amet",
-  },
-  {
-    title: "Sit amet",
-  },
-  {
-    title: "Consectetuer",
-  },
-  {
-    title: "Donec quam felis",
-  },
-  {
-    title: "Curabitur ullamcorper",
-  },
-];
+import { ModalSelectBtn } from "../../constant/group";
+
+import "./modal.css";
 
 const Modal = ({ isOpen, onClose }) => {
   const [toggle, setToggle] = useState([
@@ -59,9 +42,7 @@ const Modal = ({ isOpen, onClose }) => {
               key={index}
               onClick={() => handleCheck(index)}
               style={{
-                marginRight: "5px",
-                background: `${toggle[index] ? "#8424DE" : ""}`,
-                color: `${toggle[index] ? "#F7F7F7" : ""}`,
+                marginRight: "5px", background: `${toggle[index] ? "#8424DE" : ""}`, color: `${toggle[index] ? "#F7F7F7" : ""}`,
               }}
             >
               {item.title}
@@ -81,23 +62,14 @@ const Modal = ({ isOpen, onClose }) => {
           <p>Контактные данные</p>
           <ModalInput />
           <Box style={{ display: "flex", alignItems: "center" }}>
-            <Checkbox
-              sx={{
-                "&.Mui-checked": {
-                  color: "#8424DE",
-                },
-              }}
-            />
+            <Checkbox sx={{ "&.Mui-checked": { color: "#8424DE" } }} />
             <div className="checkTxt">
               Отправляя форму, вы соглашаетесь на обработку{" "}
               <span>персональных данных</span>
             </div>
           </Box>
         </div>
-        <button
-          style={{ marginLeft: "75px", marginBottom: "100px" }}
-          className="welcomeMotalBtn"
-        >
+        <button style={{ marginLeft: "75px", marginBottom: "100px" }} className="welcomeMotalBtn">
           Отправить
         </button>
       </div>

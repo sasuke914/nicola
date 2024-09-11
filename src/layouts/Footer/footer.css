@@ -1,7 +1,7 @@
 .footerContainer {
+  background: var(--emailBgColor);
   width: 100%;
   max-width: 1440px;
-  background: var(--emailBgColor);
   margin: auto;
 }
 
@@ -9,10 +9,10 @@
   width: 100%;
   max-width: 1160px;
   height: 45vh;
-  margin: auto;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  flex-direction: column;
+  margin: auto;
 }
 
 .footerFirst {
@@ -21,19 +21,19 @@
   padding-top: 43px;
 }
 
-.footerFirst > div {
+.footerFirst div {
   color: var(--primary-txtColor);
-  font-family: "Inter";
   font-weight: 400;
-  line-height: 22.4px;
   font-size: 16px;
+  line-height: 22.4px;
 }
 
 .footerInput {
+  background: #c4c4c4;
   width: 280px;
   height: 45px;
-  background: #c4c4c4;
   border: none;
+  border-radius: 5px;
 }
 
 .footerSecond {
@@ -44,63 +44,55 @@
 
 .footerIcontxt {
   display: flex;
+  text-decoration: none;
 }
 
-.footerIcontxt > div {
+.footerIcontxt div {
+  margin-left: 18px;
+  color: var(--primary-txtColor);
   font-size: 26px;
-  font-family: "Inter";
   font-weight: 500;
   line-height: 39px;
   letter-spacing: -0.03em;
-  margin-left: 18px;
-
-  color: var(--primary-txtColor);
 }
 
 .footerDarkBtn {
   background: var(--primary-txtColor);
-  font-size: 16px;
-  font-family: "Inter";
-  font-weight: 500;
-  color: var(--primary-bgColor);
-  padding: 16.5px 47px 16.5px 40px;
-  border: none;
-  transition: 1s;
-  border-radius: 550.16px;
   display: flex;
   align-items: center;
+  padding: 16.5px 47px 16.5px 40px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--primary-bgColor);
+  border: none;
+  border-radius: 550.16px;
+  text-decoration: none;
+  transition: 1s;
 }
 
 .footerDarkBtn:hover {
+  background: #8424de;
   cursor: pointer;
   transition: 1s;
-  background: #8424de;
-}
-
-.footerGrayBtns {
-  display: flex;
 }
 
 .footerBtnItem {
   background: var(--bottomBtnColor);
-  color: var(--bottomTxtColor);
-  /* padding: 16px 34px 17px 34px; */
   border: none;
   border-radius: 50px;
-  font-family: "Inter";
-  font-size: 14px;
-  font-weight: 400;
-  cursor: pointer;
-  transition: 0.5s;
   margin-right: 5px;
+  color: var(--bottomTxtColor);
+  font-size: 14px;
   letter-spacing: -0.03em;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
 .footerBtnItem:hover {
-  cursor: pointer;
-  transition: 0.8s;
   background: var(--primary-txtColor);
   color: var(--headerTxtColor);
+  transition: 0.8s;
+  cursor: pointer;
 }
 
 .footerThird {
@@ -118,25 +110,23 @@
 }
 
 .footerSocials img:hover {
-  cursor: pointer;
   filter: brightness(0%) contrast(100%);
 }
 
-.footerSocials > div {
+.footerSocials a {
   margin-left: 20px;
+  transition: 1s;
+  cursor: pointer;
 }
 
 .footerDown {
-  border-top: 1px solid #e0e0e0;
   display: flex;
   justify-content: space-between;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  border-top: 1px solid #e0e0e0;
+  padding: 20px 0;
 }
 
-.footerDown > div {
+.footerDown div {
   color: var(--headerTxtColor);
   font-size: 14px;
-  font-family: "Inter";
-  font-weight: 400;
 }

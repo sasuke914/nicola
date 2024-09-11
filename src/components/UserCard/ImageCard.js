@@ -1,13 +1,5 @@
-import React, { useState } from "react";
-import {
-  CardActionArea,
-  Stack,
-  Card,
-  CardContent,
-  CardMedia,
-  Typography,
-  Box,
-} from "@mui/material";
+import { useState } from "react";
+import { Stack, Card, CardContent, CardMedia, Typography } from "@mui/material";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import PreviewContent from "./Preview/TextContent";
@@ -53,8 +45,7 @@ export default function ImageCard(props) {
         <Typography
           sx={{
             color: "rgba(247, 247, 247, 1)",
-            fontSize: "20px",
-            fontFamily: "Inter",
+            fontSize: "20px"
           }}
           gutterBottom
           variant="h5"
@@ -79,7 +70,6 @@ export default function ImageCard(props) {
             height: "100px",
             padding: "0 5px",
             overflow: "hidden",
-            fontFamily: "Inter",
           }}
           gutterBottom
           variant="body2"
@@ -112,12 +102,11 @@ export default function ImageCard(props) {
             onClick={handleMore}
             className="imgCardLinkWrap"
           >
-            <div
+            <div className="imgCardLink">Читать отзыв</div>
+            <ArrowOutwardIcon
+              sx={{ fontSize: "18px" }}
               className="imgCardLink"
-            >
-              Читать отзыв
-            </div>
-            <ArrowOutwardIcon sx={{fontSize: "18px"}} className="imgCardLink" />
+            />
           </Stack>
         </Stack>
       </CardContent>

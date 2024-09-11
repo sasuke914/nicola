@@ -1,14 +1,10 @@
-import React from "react";
-import SectionButton1 from "../../../components/Button/SectionButton1";
-import "./publication.css";
-
 const PublicationTitle = () => {
   return (
-    <div className="publicationTitle1">
-      <div className="pubTitleLeft1">
-        <SectionButton1 title="Lorem ipsum" />
+    <div className="sectionHeader" style={{ marginTop: '185px' }}>
+      <div className="sectionLeft">
+        <button className="sectionButton">Lorem ipsum</button>
       </div>
-      <div className="pubTitleRight1">
+      <div className="sectionRight">
         Lorem <span>ipsum dolor sit amet</span> consectetuer
       </div>
     </div>

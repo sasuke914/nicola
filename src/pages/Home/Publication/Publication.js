@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Box } from "@mui/material";
-import PublicationTitle from "./PublicationTitle";
 import { GoArrowUpRight } from "react-icons/go";
+import PublicationTitle from "./PublicationTitle";
 import BlackBtn from "../../../components/Button/BlackBtn";
 import { getPublist } from "../../../api/fetchAPI";
 import END_POINT from "../../../config/config";
-import { pubHabr, pubVcru, pubYoutube } from "../../../constant";
-import eyeImg from "../../../assets/icon/eye.png";
-import heartImg from "../../../assets/icon/heart.png";
-import circleImg from "../../../assets/icon/circle.png";
-import rectImg from "../../../assets/icon/rect.png";
+
+import { pubEye, pubHabr, pubHeart, pubMsg, pubRect, pubVcru, pubYoutube } from "../../../assets";
+
 import "./publication.css";
 
 const PubCell = (props) => {
@@ -45,15 +43,10 @@ const PubCell = (props) => {
       </div>
       <div className="carTitle">{props.item.title}</div>
       <div className="briefDescription">{props.item.description}</div>
-      <div
-        style={{
-          backgroundImage: `url(${END_POINT}/uploads/${props.item.image})`,
-        }}
-        className="carImg"
-      ></div>
+      <div style={{ backgroundImage: `url(${END_POINT}/uploads/${props.item.image})` }} className="carImg"></div>
       <div className="carfooter">
         {props.item.platform === "VC" && (
-          <a href="https://vc.ru/" target="_blank">
+          <a href="https://vc.ru/" target="_blank" rel="noopener noreferrer">
             <button className="carLinkBtn">
               {props.item.linktopub} &nbsp;
               <GoArrowUpRight style={{ fontSize: "20px" }} />
@@ -61,7 +54,11 @@ const PubCell = (props) => {
           </a>
         )}
         {props.item.platform === "YouTube" && (
-          <a href="https://www.youtube.com/" target="_blank">
+          <a
+            href="https://www.youtube.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <button className="carLinkBtn">
               {props.item.linktopub} &nbsp;
               <GoArrowUpRight style={{ fontSize: "20px" }} />
@@ -69,7 +66,11 @@ const PubCell = (props) => {
           </a>
         )}
         {props.item.platform === "Habr" && (
-          <a href="https://habr.com/ru/articles/" target="_blank">
+          <a
+            href="https://habr.com/ru/articles/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <button className="carLinkBtn">
               {props.item.linktopub} &nbsp;
               <GoArrowUpRight style={{ fontSize: "20px" }} />
@@ -78,19 +79,19 @@ const PubCell = (props) => {
         )}
         <div className="metrics">
           <div className="metricsItem">
-            <img src={eyeImg} />
+            <img src={pubEye} alt="eye" />
             <div className="metricsNum">{views}</div>
           </div>
           <div className="metricsItem">
-            <img src={heartImg} />
+            <img src={pubHeart} alt="heart" />
             <div className="metricsNum">{props.item.metrics.likes}</div>
           </div>
           <div className="metricsItem">
-            <img src={circleImg} />
+            <img src={pubMsg} alt="circle" />
             <div className="metricsNum">{props.item.metrics.comments}</div>
           </div>
           <div className="metricsItem">
-            <img src={rectImg} />
+            <img src={pubRect} alt="rect" />
             <div className="metricsNum">{props.item.metrics.favourites}</div>
           </div>
         </div>
@@ -111,10 +112,9 @@ const Publication = () => {
       }
     });
   }, []);
-  // console.log("publications", publications);
 
   return (
-    <Box className="section">
+    <Box className="section" id="publication">
       <PublicationTitle />
       <Box className="carCompoWrap">
         {publications.map((item, idx) => {
@@ -122,13 +122,7 @@ const Publication = () => {
         })}
       </Box>
       <Box className="publicationBtn">
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            marginTop: "40px",
-          }}
-        >
+        <div style={{ display: "flex", justifyContent: "center", marginTop: "40px", }}>
           <BlackBtn title="Больше публикаций" />
         </div>
       </Box>

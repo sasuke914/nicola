@@ -1,12 +1,14 @@
-import React, { useState, useEffect, useRef } from "react";
-import { getCustoms } from "../../../api/cusAPI";
+import { useState, useEffect, useRef } from "react";
 import { Box } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+
+import { getCustoms } from "../../../api/cusAPI";
 import CustomerReviewsTitle from "./CustomerReviewsTitle";
 import VideoCard from "../../../components/UserCard/VideoCard";
 import ImageCard from "../../../components/UserCard/ImageCard";
 import endpoint from "../../../config/config";
+
 import "./custom-swiper.css";
 
 const CustomerReviews = () => {
@@ -25,10 +27,7 @@ const CustomerReviews = () => {
   return (
     <Box id="c_reviews" className="customerContainer">
       <CustomerReviewsTitle />
-      <Swiper
-        className="mySwiper"
-        centeredSlides={true}
-        grabCursor={true}
+      <Swiper className="mySwiper" centeredSlides={true} grabCursor={true}
         breakpoints={{
           640: {
             slidesPerView: 1,

@@ -1,13 +1,11 @@
-import React from "react";
-import SectionButton1 from "../../../components/Button/SectionButton1";
-
 const UserListTitle = () => {
   return (
-    <div className="userListTitle">
-      <div className="userListTitleLeft">
-        <SectionButton1 title="Lorem Ipsum" />
+    <div className="sectionHeader">
+      <div className="sectionLeft">
+        <button className="sectionButton">Lorem ipsum</button>
+        {/* <button className="sectionButton">Lorem ipsum</button> */}
       </div>
-      <div className="userListTitleRight">
+      <div className="sectionRight" style={{ width: '710px' }}>
         <span>Lorem ipsum dolor sit am</span> consectetuer adipiscing elit
         Aenean commodo
       </div>

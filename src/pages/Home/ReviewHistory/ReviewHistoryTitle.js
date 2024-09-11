@@ -1,14 +1,10 @@
-import React from "react";
-import SectionButton1 from "../../../components/Button/SectionButton1";
-import "./reviewHistory.css";
-
 const ReviewHistoryTitle = () => {
   return (
-    <div className="rewHisTitle">
-      <div className="rewHisTitleLeft">
-        <SectionButton1 title="Lorem ipsum" />
+    <div className="sectionHeader" style={{ paddingTop: '69px' }}>
+      <div className="sectionLeft">
+        <button className="sectionButton" style={{ backgroundColor: "var(--historySecBtn)" }}>Lorem ipsum</button>
       </div>
-      <div className="rewHisTitleRight">
+      <div className="sectionRight" style={{ width: '567px' }}>
         Lorem ipsum dolor sit amet <br />
         <span>lorem ipsum dolor sit</span>
       </div>

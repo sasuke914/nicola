@@ -1,9 +1,8 @@
 .welcomeContainer {
+  position: relative;
   width: 100%;
-  /* padding-top: 112px; */
   padding-bottom: 190px;
   overflow: hidden;
-  position: relative;
 }
 
 .welcomeWrapper {
@@ -23,8 +22,8 @@
 }
 
 .welcomeImgWrap {
-  margin-top: 12px;
   position: relative;
+  margin-top: 12px;
 }
 
 .logoImg {
@@ -35,15 +34,15 @@
 }
 
 .circleImg {
+  position: absolute;
   width: 54.07px;
   height: 54.07px;
-  position: absolute;
   right: 33px;
   bottom: -10px;
   cursor: pointer;
 }
 
-.circleImg:hover{
+.circleImg:hover {
   cursor: pointer;
 }
 
@@ -56,53 +55,40 @@
 }
 
 .welcomeTitle {
-  font-family: "Inter";
-  font-weight: 600;
-  font-size: 66px;
   color: var(--pinkColor);
+  font-size: 66px;
+  font-weight: 600;
   line-height: 79.2px;
   letter-spacing: -0.03em;
 }
 
 .welcomeTitle span {
-  font-family: "Inter";
-  font-weight: 600;
-  font-size: 66px;
   color: var(--primary-txtColor);
-  line-height: 79.2px;
-  letter-spacing: -0.03em;
 }
 
 .welcomeText {
-  font-family: "Inter";
-  font-weight: 400;
+  margin-top: 22px;
   font-size: 20px;
-  line-height: 28px;
   color: var(--primary-txtColor);
   letter-spacing: -0.03em;
-  margin-top: 22px;
+  line-height: 28px;
 }
 
-.welcomeMotalBtn {
-  font-family: "Inter";
+.welcomeBtn {
+  background: var(--pinkColor);
+  padding: 16px 30px 16px 30px;
+  margin-top: 70px;
   font-weight: 500;
   font-size: 18px;
-  background: var(--pinkColor);
   color: #f7f7f7;
-  padding: 16px 30px 16px 30px;
+  font-family: "Inter";
   border: none;
   border-radius: 550.16px;
-  cursor: pointer;
-  margin-top: 70px;
   transition: 0.5s;
+  cursor: pointer;
 }
 
-.welcomeMotalBtn:hover {
+.welcomeBtn:hover {
   background: black;
   transition: 0.5s;
-}
-@media (max-width: 1330px) {
-  .circleImg {
-    right: 150px;
-  }
 }

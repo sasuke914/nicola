@@ -79,7 +79,7 @@ const NewPub = ({ setRoute }) => {
 
   const handleChangeDate = (date) => {
     setSelectedDate(date)
-    setFormData({ ...formData, ['date']: date.toLocaleDateString() })
+    setFormData({ ...formData, 'date': date.toLocaleDateString() })
   }
 
   const handleSubmit = (e) => {

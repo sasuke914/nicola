@@ -1,212 +1,282 @@
 import {
-  facebook,
-  gameImg,
-  habr,
-  linkedin,
-  telegram,
-  vcru,
-  x,
-  youtube_dark,
-  telegram1, vcru1, habr1, facebook1, linkedin1, x1, youtube_dark1
-} from ".";
+  pFacebook, pHabr, pLinkedin, pMail, pTelegram, pTwitter, pVcru, pYoutube,
+  slide1, slide2, slide3, slide4, slide5, slide6, slide7, slide8, slide9, slide10, slide11, slide12, slide13, slide14, slide15, slide16,
+  gTelegram, gVcru, gHabr, gFacebook, gLinkedin, gTwitter, gYoutube,
+  gameImg, smallAvatar1, smallAvatar2, smallAvatar3, smallAvatar4,
+} from "../assets";
 
-import vcruImg from "../assets/icon/vcru.png";
-import youtubeImg from "../assets/icon/youtube.png";
-import habrImg from "../assets/icon/habr.png";
-import car1Img from "../assets/car1.png";
-import car2Img from "../assets/car2.png";
-import car3Img from "../assets/car3.png";
-import car4Img from "../assets/car4.png";
-import car5Img from "../assets/car5.png";
-import car6Img from "../assets/car6.png";
-import eyeImg from "../assets/icon/eye.png";
-import heartImg from "../assets/icon/heart.png";
-import circleImg from "../assets/icon/circle.png";
-import rectImg from "../assets/icon/rect.png";
 
-import swiper1 from "../assets/swiper1.png";
-import swiper2 from "../assets/swiper2.png";
+//Layouts
+const headerBtnInfo = [
+  {
+    title: "Lorem",
+    path: "userlist",
+    padding: "12.5px 24.5px 13.5px 24.5px",
+  },
+  {
+    title: "Ipsum",
+    path: "publication",
+    padding: "12.5px 37.5px 13.5px 36.5px",
+  },
+  {
+    title: "Dolor sit",
+    path: "c_reviews",
+    padding: "12.5px 34.5px 13.5px 34.5px",
+  },
+  {
+    title: "Amet",
+    path: "metelegram",
+    padding: "12.5px 23.5px 13.5px 24.5px",
+  },
+  {
+    title: "Commodo",
+    path: "events",
+    padding: "12.5px 14.5px 13.5px 14.5px",
+  },
+];
 
-import slide1 from '../assets/slide/slide1.png'
-import slide2 from '../assets/slide/slide2.png'
-import slide3 from '../assets/slide/slide3.png'
-import slide4 from '../assets/slide/slide4.png'
-import slide5 from '../assets/slide/slide5.png'
-import slide6 from '../assets/slide/slide6.png'
-import slide7 from '../assets/slide/slide7.png'
-import slide8 from '../assets/slide/slide8.png'
-import slide9 from '../assets/slide/slide9.png'
-import slide10 from '../assets/slide/slide10.png'
-import slide11 from '../assets/slide/slide11.png'
-import slide12 from '../assets/slide/slide12.png'
-import slide13 from '../assets/slide/slide13.png'
-import slide14 from '../assets/slide/slide14.png'
-import slide15 from '../assets/slide/slide15.png'
-import slide16 from '../assets/slide/slide16.png'
+const footerLeftInfo = [
+  {
+    icons: <img src={pTelegram} alt="telegram" />,
+    letter: "@login",
+    url: "https://web.telegram.org",
+  },
+  {
+    icons: <img src={pMail} alt="mail" />,
+    letter: "mail@site.ru",
+    url: "https://mail.ru",
+  },
+];
 
+const footerBtnInfo = [
+  {
+    title: "Lorem",
+    padding: "16px 24px 17px 24px",
+    path: "userlist",
+  },
+  {
+    title: "Ipsum",
+    padding: "16px 37px 17px 36px",
+    path: "publication",
+  },
+  {
+    title: "Dolor sit",
+    padding: "16px 34px 17px 34px",
+    path: "c_reviews",
+  },
+  {
+    title: "Amet",
+    padding: "16px 24px 17px 23px",
+    path: "metelegram",
+  },
+  {
+    title: "Aenean",
+    padding: "16px 23px 17px 23px",
+    path: "events",
+  },
+];
+
+const footerSocialInfo = [
+  {
+    path: "https://habr.com/ru/articles/",
+    src: pHabr
+  },
+  {
+    path: "https://vc.ru/",
+    src: pVcru
+  },
+  {
+    path: "https://ru.linkedin.com/",
+    src: pLinkedin
+  },
+  {
+    path: "https://www.facebook.com/",
+    src: pFacebook
+  },
+  {
+    path: "https://twitter.com",
+    src: pTwitter
+  },
+  {
+    path: "https://www.youtube.com",
+    src: pYoutube
+  },
+]
+
+//Welcome
+const welcomeLinkBtn = [
+  {
+    title: "VC",
+    path: "https://vc.ru/",
+  },
+  {
+    title: "Telegram",
+    path: "https://web.telegram.org",
+  },
+  {
+    title: "Habr",
+    path: "https://habr.com/ru/articles/",
+  },
+];
+
+
+//Publication
 const publicationCards = [
   {
     purpleText: "Lorem ipsum dolor",
     text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit",
     title: "5 dolor",
-    content:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit Aenean commodo ligula eget",
+    content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit Aenean commodo ligula eget",
+    class: "pubCard"
   },
   {
     purpleText: "Lorem ipsum dolor sit",
     text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit",
     title: "amet",
-    content:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit Aenean commodo",
+    content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit Aenean commodo",
+    class: "pubCard1"
   },
   {
     purpleText: "Lorem ipsum dolor",
     text: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit Aenean commodo`,
     title: "13 sit",
     content: "Lorem ipsum dolor sit '\n amet, consectetuer adipiscing elit",
+    class: "pubCard"
   },
   {
     purpleText: "опишите задачу",
     text: "Отправляя форму, вы соглашаетесь  на обработку персоналных",
     title: "a 7 adipiscing",
-    content:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit Aenean commodo eget",
+    content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit Aenean commodo eget",
+    class: "pubCard"
   },
 ];
 
-const userDescriptionDatas = [
+const ModalSelectBtn = [
   {
-    count: 20,
-    title: " + ",
-    content: ["Lorem", "Ipsum Dolor"],
+    title: "Lorem ipsum",
   },
   {
-    count: 50,
-    title: " + ",
-    content: ["Consectetuer", "adipiscing"],
+    title: "Dolor sit amet",
   },
   {
-    count: 187,
-    title: " + sit",
-    content: ["Lorem", "Ipsum Dolor"],
+    title: "Sit amet",
   },
   {
-    count: 5,
-    title: "amet",
-    content: ["Consectetuer", "adipiscing"],
+    title: "Consectetuer",
   },
   {
-    count: 30,
-    title: " + ",
-    content: ["Lorem", "Ipsum Dolor"],
+    title: "Donec quam felis",
+  },
+  {
+    title: "Curabitur ullamcorper",
+  },
+]
+
+const ModalInputTitle = [
+  "Ваше имя", "Ваш телефон", "Ваш telegram", "Ваш email"
+]
+
+//UserList
+const smallAvatar = [
+  {
+    url: smallAvatar1,
+    title: "Lorem",
+    images: [slide1, slide2, slide3, slide4],
+  },
+  {
+    url: smallAvatar2,
+    title: "Ipsum",
+    images: [slide5, slide6, slide7, slide8],
+  },
+  {
+    url: smallAvatar3,
+    title: "Sit amet",
+    images: [slide9, slide10, slide11, slide12],
+  },
+  {
+    url: smallAvatar4,
+    title: "Consectetuer",
+    images: [slide13, slide14, slide15, slide16],
   },
 ];
 
-const carLocationList = [
+const numberInfo = [
   {
-    title: "The More Important the Work, the More Important the Rest",
-    date: "29 февраля 2024",
-    briefDescription:
-      "Physiological respiration involves the mechanisms that ensure that the composition of the functional",
-    image: car1Img,
-    platform: vcruImg,
-    linkTitle: "Читать на VC",
-    views: eyeImg,
-    viewsNum: "16к",
-    likes: heartImg,
-    likesNum: "48",
-    comments: circleImg,
-    commentsNum: "21",
-    favourites: rectImg,
-    favouritesNum: "3",
+    number: "20",
+    add: "+",
+    description: ["Lorem", "Ipsum Dolor"],
+    style: { width: '80px', marginRight: '60px' },
   },
   {
-    title: "The More Important the Work, the More Important the Rest",
-    date: "27 декабря 2023",
-    briefDescription:
-      "Maxwell's equations—the foundation of classical electromagnetism—describe light as a wave that moves",
-    image: car2Img,
-    platform: vcruImg,
-    linkTitle: "Читать на VC",
-    views: eyeImg,
-    viewsNum: "16к",
-    likes: heartImg,
-    likesNum: "48",
-    comments: circleImg,
-    commentsNum: "21",
-    favourites: rectImg,
-    favouritesNum: "3",
+    number: "50",
+    add: "+",
+    description: ["Consectetuer", "adipiscing"],
+    style: { width: '88.72px', marginRight: '60px' },
   },
   {
-    title: "How to design a product that can grow itself 10x in year:",
-    date: "21 декабря 2023",
-    briefDescription:
-      "For athletes, high altitude produces two contradictory effects on performance. For explosive events ",
-    image: car3Img,
-    platform: vcruImg,
-    linkTitle: "Читать на VC",
-    views: eyeImg,
-    viewsNum: "16к",
-    likes: heartImg,
-    likesNum: "48",
-    comments: circleImg,
-    commentsNum: "21",
-    favourites: rectImg,
-    favouritesNum: "3",
+    number: "187",
+    add: "+ sit",
+    description: ["Lorem", "Ipsum Dolor"],
+    style: { width: '91px', marginRight: '68px' },
   },
   {
-    title: "The More Important the Work, the More Important the Rest",
-    date: "13 декабря 2023",
-    briefDescription:
-      "Maxwell's equations—the foundation of classical electromagnetism—describe light as a wave that moves",
-    image: car4Img,
-    platform: youtubeImg,
-    linkTitle: "Cмотреть на YouTube",
-    views: eyeImg,
-    viewsNum: "16к",
-    likes: heartImg,
-    likesNum: "48",
-    comments: circleImg,
-    commentsNum: "21",
-    favourites: rectImg,
-    favouritesNum: "3",
+    number: "5",
+    add: "amet",
+    description: ["Consectetuer", "adipiscing"],
+    style: { width: '80px', marginRight: '46.12px' },
   },
   {
-    title: "The More Important the Work, the More Important the Rest",
-    date: "7 октября 2023",
-    briefDescription:
-      "The long barrow was built on land previously inhabited in the Mesolithic period. It consisted of a s",
-    image: car5Img,
-    platform: habrImg,
-    linkTitle: "Читать на Habr",
-    views: eyeImg,
-    viewsNum: "16к",
-    likes: heartImg,
-    likesNum: "48",
-    comments: circleImg,
-    commentsNum: "21",
-    favourites: rectImg,
-    favouritesNum: "3",
+    number: "30",
+    add: "+",
+    description: ["Lorem", "Ipsum Dolor"],
+    style: { width: '90px' },
   },
-  {
-    title:
-      "Understanding color theory: the color wheel and finding complementary colors",
-    date: "22 марта 2024",
-    briefDescription:
-      "The long barrow was built on land previously inhabited in the Mesolithic period. It consisted of a s",
-    image: car6Img,
-    platform: habrImg,
-    linkTitle: "Читать на Habr",
-    views: eyeImg,
-    viewsNum: "16к",
-    likes: heartImg,
-    likesNum: "48",
-    comments: circleImg,
-    commentsNum: "21",
-    favourites: rectImg,
-    favouritesNum: "3",
-  },
+]
+
+const skillButton = [
+  "Lorem ipsum dolor sit",
+  "Aenean massa socilis",
+  "Nascetur ridiculus",
+  "Donec",
+  "Integer tincidunt Cras da",
+  "Phasellus viverra",
 ];
+
+//Email
+
+const gSocialIcon = [
+  {
+    image: gTelegram,
+    url: "https://web.telegram.org",
+  },
+  {
+    image: gVcru,
+    url: "https://vc.ru/",
+  },
+  {
+    image: gHabr,
+    url: "https://habr.com/ru/articles/",
+  },
+  {
+    image: gFacebook,
+    url: "https://www.facebook.com/",
+  },
+  {
+    image: gLinkedin,
+    url: "https://ru.linkedin.com/",
+  },
+  {
+    image: gTwitter,
+    url: "https://twitter.com",
+  },
+  {
+    image: gYoutube,
+    url: "https://www.youtube.com/",
+  },
+]
+
+//ReviewHistory
 
 const historyBox = [
   {
@@ -239,96 +309,19 @@ const historyBox = [
     imgUrl: "",
     date: "22.02.2024",
   },
-];
-
-const myCustomers = [
-  {
-    name: "Cameron Williamson",
-    position: "Управляющий партнёр компании",
-    image: swiper1,
-    content:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut",
-  },
-  {
-    name: "Cameron Williamson",
-    position: "Управляющий партнёр компании",
-    image: swiper2,
-    content:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut",
-  },
-];
-
-const circleIcon = [
-  {
-    image: telegram,
-    url: 'https://web.telegram.org'
-  },
-  {
-    image: vcru,
-    url: 'https://vc.ru/'
-  },
-  {
-    image: habr,
-    url: 'https://habr.com/ru/articles/'
-  },
-  {
-    image: facebook,
-    url: 'https://www.facebook.com/'
-  },
-  {
-    image: linkedin,
-    url: 'https://ru.linkedin.com/'
-  },
-  {
-    image: x,
-    url: 'https://twitter.com'
-  },
-  {
-    image: youtube_dark,
-    url: 'https://www.youtube.com/'
-  }
-];
-
-const circle1Icon = [telegram1, vcru1, habr1, facebook1, linkedin1, x1, youtube_dark1]
-
-const smallAvatar = [
-  {
-    url: "./assets/smallAvatar1.png",
-    title: "Lorem",
-    images:[
-      slide1,slide2,slide3,slide4
-    ]
-  },
-  {
-    url: "./assets/smallAvatar2.png",
-    title: "Ipsum",
-   images:[
-      slide5,slide6,slide7,slide8
-    ]
-  },
-  {
-    url: "./assets/smallAvatar3.png",
-    title: "Sit amet",
-   images:[
-      slide9,slide10,slide11,slide12
-    ]
-  },
-  {
-    url: "./assets/smallAvatar4.png",
-    title: "Consectetuer",
-    images:[
-      slide13,slide14,slide15,slide16
-    ]
-  },
-];
+]
 
 export {
-  publicationCards,
-  userDescriptionDatas,
-  carLocationList,
-  circleIcon,
+  //Layouts
+  headerBtnInfo, footerLeftInfo, footerBtnInfo, footerSocialInfo,
+  //Welcome
+  welcomeLinkBtn,
+  //Publication
+  publicationCards, ModalSelectBtn, ModalInputTitle,
+  //UserList
+  smallAvatar, numberInfo, skillButton,
+  //Email
+  gSocialIcon,
+  //ReviewHistory
   historyBox,
-  myCustomers,
-  circle1Icon,
-  smallAvatar,
 };

@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Box } from "@mui/material";
+
 import EventsTitle from "./EventsTitle";
 import BlackBtn from "../../../components/Button/BlackBtn";
 import { getEvents } from "../../../api/eveAPI";
+
 import "./events.css";
 
 const EventsCell = (props) => {
@@ -30,7 +32,6 @@ const EventsCell = (props) => {
       <div className="eventsAddressWrap">
         <div
           style={{
-            fontFamily: "Inter",
             fontWeight: "600",
             fontSize: "16px",
             color: "var(--primary-txtColor)",
@@ -40,8 +41,6 @@ const EventsCell = (props) => {
         </div>
         <div
           style={{
-            fontFamily: "Inter",
-            fontWeight: "400",
             fontSize: "16px",
             color: "var(--primary-txtColor)",
             margin: "6px 0 6px 0",
@@ -52,8 +51,6 @@ const EventsCell = (props) => {
         </div>
         <div
           style={{
-            fontFamily: "Inter",
-            fontWeight: "400",
             fontSize: "16px",
             color: "var(--primary-txtColor)",
           }}
@@ -88,7 +85,6 @@ const Events = () => {
         <div
           style={{
             width: "455px",
-            fontFamily: "Inter",
             fontWeight: "700",
             fontSize: "18px",
             color: "var(--pinkColor)",
@@ -97,7 +93,7 @@ const Events = () => {
           }}
         >
           Lorem ipsum dolor sit amet,
-          <br /> consectetuer 
+          <br /> consectetuer
         </div>
         <Box>
           <BlackBtn title="Lorem ipsum dolor sit" />

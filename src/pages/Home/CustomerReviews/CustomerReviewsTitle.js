@@ -1,14 +1,10 @@
-import React from "react";
-import SectionButton1 from "../../../components/Button/SectionButton1";
-import "./custom-swiper.css";
-
 const CustomerReviewsTitle = () => {
   return (
-    <div className="rewCusTitle">
-      <div className="rewCusTitleLeft">
-        <SectionButton1 title="Lorem Ipsum" />
+    <div className="sectionHeader" style={{ marginTop: '185px' }}>
+      <div className="sectionLeft">
+        <button className="sectionButton">Lorem ipsum</button>
       </div>
-      <div className="rewCusTitleRight">
+      <div className="sectionRight" style={{ width: '567px' }}>
         Lorem ipsum dolor sit
         <br /> amet dolo <span>lorem ipsum dolor</span>
       </div>

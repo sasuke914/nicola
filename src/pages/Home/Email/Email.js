@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Box } from "@mui/material";
-import { circleIcon } from "../../../constant/group";
-import groupImg from "../../../assets/Group 21.png";
+
 import { insertEmail, sendEmail } from "../../../api/emailAPI";
+
+import { gSocialIcon } from "../../../constant/group";
+import { emailCircle } from "../../../assets";
+
 import "./email.css";
 
 const Email = () => {
@@ -10,6 +13,7 @@ const Email = () => {
     email: "",
   });
   const handleChange = (e) => {
+    console.log(e.target.value)
     setEmailData({ ...emailData, email: e.target.value });
   };
 
@@ -28,15 +32,36 @@ const Email = () => {
       }
     });
   };
+
+  const GsocialIcon = () => (
+    <>
+      {gSocialIcon.map((item, index) => (
+        <Box key={index} className="emailCircle">
+          <a href={item.url} target="_blank" rel="noopener noreferrer">
+            <img
+              src={item.image}
+              alt={item.image}
+              style={{
+                paddingTop: index === 2 ? "7px" : index === 6 ? "6px" : index === 5 ? "3px" : "0px",
+                paddingLeft: `${index === 2 ? "5px" : index === 6 ? "2.5px" : "0px"
+                  }`,
+              }}
+            />
+          </a>
+        </Box>
+      ))}
+    </>
+  )
+
   return (
     <div className="Emailsection">
-      <img src={groupImg} className="groupImg" />
+      <img src={emailCircle} className="groupImg" alt="groupImg" />
       <div className="emailTitle">The More Important</div>
       <div className="emailTxt">Physiological respiration involves</div>
       <div className="emailFooter">
         <div className="inputWrapper">
           <label className="inp">
-            <input type="email" onChange={handleChange} id="inp" placeholder="&nbsp;" />
+            <input type="email" onChange={handleChange} value={emailData.email} id="inp" placeholder="&nbsp;" />
             <span className="label">Ваш Email</span>
             <span className="focus-bg"></span>
           </label>
@@ -45,19 +70,7 @@ const Email = () => {
           </button>
         </div>
         <div className="emailIconWrapper">
-          {circleIcon.map((item, index) => (
-            <Box key={index} className="emailCircle">
-              <a href={item.url} target="_blank">
-                <img
-                  src={item.image}
-                  style={{
-                    paddingTop: `${index === 2 && "7px"}`,
-                    paddingLeft: `${index === 2 && "5px"}`,
-                  }}
-                />
-              </a>
-            </Box>
-          ))}
+          <GsocialIcon />
         </div>
       </div>
     </div>

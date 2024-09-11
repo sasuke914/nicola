@@ -1,38 +1,9 @@
-.userListTitle {
-  width: 100%;
-  margin: auto;
-  display: flex;
-}
-
-.userListTitleLeft {
-  margin-left: 136px;
-  margin-top: 10px;
-}
-
-.userListTitleRight {
-  width: 720px;
-  font-family: "Inter";
-  font-weight: 600;
-  font-size: 40px;
-  line-height: 48px;
-  color: var(--primary-txtColor);
-  letter-spacing: -0.03em;
-  margin-left: 348px;
-}
-
-.userListTitleRight span {
-  color: var(--pinkColor);
-}
-
 .customerBottom {
   width: 100% !important;
   max-width: 1160px !important;
-  margin: auto;
   display: flex;
+  margin: auto;
   margin-top: 65px;
-}
-
-.userListLeftWrap {
 }
 
 .userListRightWrap {
@@ -43,10 +14,8 @@
 .customerImg {
   width: 389px;
   height: 531px;
-  background-position: left;
-  background-size: contain;
-  background-repeat: no-repeat;
   border-radius: 10px;
+  object-fit: contain;
 }
 
 .circlePhotoContainer {
@@ -54,21 +23,19 @@
 }
 
 .smallAvatarText {
-  text-align: center;
-  font-family: "Inter";
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: -0.03em;
-  color: var(--smallAvatarText);
   margin-top: 8px !important;
+  text-align: center;
+  font-size: 12px;
+  color: var(--smallAvatarText);
+  letter-spacing: -0.03em;
 }
 
 .smallAvatar {
+  padding: 3px;
+  margin-top: -3px;
   border-radius: 50%;
   outline: 2px solid #8424de;
-  padding: 3px;
   cursor: pointer;
-  margin-top: -3px;
 }
 
 .smallAvatar:hover {
@@ -76,11 +43,10 @@
 }
 
 .middleText {
-  font-family: "Inter" !important;
+  margin-top: 63px !important;
   font-weight: 600 !important;
   font-size: 25px !important;
   color: var(--pinkColor);
-  margin-top: 63px !important;
   letter-spacing: -0.03em !important;
 }
 
@@ -97,61 +63,45 @@
 .piceNumber {
   display: flex;
   align-items: center;
+  margin-top: 25px;
   font-size: 25px;
-  font-family: "Inter";
   font-weight: 700;
   color: var(--primary-txtColor);
   letter-spacing: -0.03em;
-  margin-top: 25px;
 }
 
 .piceText {
-  font-family: "Inter";
-  font-weight: 400;
+  margin-top: 10px;
   font-size: 12px;
   color: var(--primary-txtColor);
   letter-spacing: -0.03em;
   line-height: 16.8px;
-  margin-top: 10px;
 }
 
 .skillBtnWrapper {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 39px;
   width: 100%;
   max-width: 505px;
+  margin-top: 39px;
 }
+
 .leftArrowBtn {
   position: absolute;
   top: 300px;
-  left: -70px;
-  color: #8424de;
   width: 40px;
-  height: 40px;
   background: #f7f7f7;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.rightArrowBtn {
-  position: absolute;
-  top: 300px;
-  right: -70px;
   color: #8424de;
-  width: 40px;
-  height: 40px;
-  background: #f7f7f7;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .userModalContainer {
-  display: flex;
-  align-items: center;
   position: absolute;
   top: 27px;
   left: 13px;
+  display: flex;
+  align-items: center;
 }
 
 .userModalContainer:hover {
@@ -165,56 +115,9 @@
 }
 
 .userModalTitle {
-  font-family: "Inter";
+  margin-left: 9px;
   font-weight: 500;
   font-size: 12px;
-  letter-spacing: -0.03em;
   color: #f7f7f7;
-  margin-left: 9px;
-}
-
-/* ///////////// */
-
-.carousel {
-  width: 100%;
-  max-width: 374px;
-  overflow: hidden;
-  position: relative;
-}
-
-.carousel-container {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-.carousel-container img {
-  width: 374px;
-  height: 665px;
-  object-fit: cover;
-}
-
-.carousel-indicators {
-  position: absolute;
-  z-index: 1000;
-  top: 17px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 5px;
-}
-
-.indicator {
-  height: 1px;
-  background-color: #f7f7f7;
-  transition: background-color 0.5s ease, transform 0.5s ease;
-}
-
-.indicator.viewed {
-  background-color: var(--pinkColor);
-  transform: scale(1);
-}
-
-.indicator.current {
-  background-color: var(--pinkColor);
-  /* transform: scale(1.5); */
+  letter-spacing: -0.03em;
 }

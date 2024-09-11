@@ -14,11 +14,13 @@
   --pinkColor: #8424de;
   --emailBgColor: #ececec;
   --inputBgColor: #dbdbdb;
-  --secondary-bgColor: #e2e2e2;
+  --secondary-bgColor: #f0f0f0;
   --footer-grayBtn: #e0e0e0;
   --cardBgColor: #212025;
   --customerCardColor: white;
-  --changeImageColor: invert(0)
+  --changeImageColor: invert(0);
+  --videoLinkColor: #8424de;
+  --historySecBtn: #e2e2e2;
 }
 
 [data-theme="dark"] {
@@ -41,5 +43,7 @@
   --footer-grayBtn: #272727;
   --cardBgColor: #8424de;
   --customerCardColor: white;
-  --changeImageColor: invert(1)
+  --changeImageColor: invert(1);
+  --videoLinkColor: #242025;
+  --historySecBtn: #f7f7f7;
 }

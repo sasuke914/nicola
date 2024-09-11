@@ -1,7 +1,7 @@
-import React from "react";
 import { Box, Paper, Typography } from "@mui/material";
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
-import { logoImg } from "../../constant";
+
+import { logo } from "../../assets";
 import "./box.css";
 
 const CustomerBox = () => {
@@ -10,22 +10,19 @@ const CustomerBox = () => {
       <div className="customerTopBtn"></div>
       <Box>
         <Paper className="cardHeader">
-          <img src={logoImg} className="smAvatar" />
+          <img src={logo} className="smAvatar" alt="logo" />
           <Typography sx={{ marginLeft: "10px", fontSize: "10px" }}>
             <b
               style={{
-                fontFamily: "Inter",
                 fontWeight: "700",
                 fontSize: "10px",
               }}
             >
-              {" "}
-              Василий Петров | Канал{" "}
-            </b>{" "}
+              Василий Петров | Канал
+            </b>
             <br />
             <span
               style={{
-                fontFamily: "Inter",
                 fontWeight: "500",
                 fontSize: "10px",
                 marginLeft: "-30px",
@@ -42,11 +39,10 @@ const CustomerBox = () => {
               sx={{
                 color: "#A55369",
                 fontSize: "11px",
-                fontFamily: "Inter",
                 fontWeight: "600",
               }}
             >
-              Василий Петров | Канал{" "}
+              Василий Петров | Канал
             </Typography>
             <span sx={{ fontSize: "12px", fontFamily: "Inter" }}>
               <div className="phoneText1">
@@ -56,7 +52,7 @@ const CustomerBox = () => {
               <div className="phoneText2">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
                 ceget dolor. sociis natoque penatibus et magnis dis. Donec quam
-                felis, pretium quis, sem. Nulla consequat massa quis enim.{" "}
+                felis, pretium quis, sem. Nulla consequat massa quis enim.
               </div>
               <div className="phoneText2">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
@@ -96,7 +92,14 @@ const CustomerBox = () => {
             <div className="phoneBottomTxt">2 комментария</div>
           </Paper>
         </Paper>
-        <button className="customerBottomBtn">Читать в телеграм</button>
+        <a
+          style={{ textDecoration: "none" }}
+          href="https://web.telegram.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="customerBottomBtn">Читать в телеграм</button>
+        </a>
       </Box>
     </div>
   );
